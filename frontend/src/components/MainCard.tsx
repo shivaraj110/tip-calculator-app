@@ -1,5 +1,4 @@
 import { Button } from "./Button";
-
 export const MainCard = () => {
   return (
     <div className="flex justify-center mt-20 space-mono-regular flex-wrap ">
@@ -12,7 +11,7 @@ export const MainCard = () => {
               <div className="text-dark-cyan w-72 ">
                 <input
                   type="text"
-                  placeholder="$"
+                  placeholder='§'
                   className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
                 />
               </div>
@@ -55,8 +54,8 @@ export const MainCard = () => {
         <div className="text-dark-cyan w-72 mt-2 mb-3">
                 <input
                   type="text"
-                  placeholder="$"
-                  className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
+                  placeholder="ø"
+                  className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
                 />
               </div>
         </div>
