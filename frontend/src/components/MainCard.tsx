@@ -11,7 +11,7 @@ export const MainCard = () => {
               <div className="text-dark-cyan w-72 ">
                 <input
                   type="text"
-                  placeholder='§'
+                  placeholder="§"
                   className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
                 />
               </div>
@@ -21,43 +21,43 @@ export const MainCard = () => {
           <div className="flex mt-6">
             <div className="col-span-1 flex">
               <div className="flex-row">
-                <div className="text-gray-500 pt-1 flex-col">
-                  select tip %
-                </div>
+                <div className="text-gray-500 pt-1 flex-col">select tip %</div>
                 <div className="text-gray-500 w-72 "></div>
               </div>
             </div>
           </div>
-<div className="grid grid-cols-3 flex-row">
-          <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
-            <Button label={'5%'} />
+          <div className="grid grid-cols-3 flex-row">
+            <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
+              <Button label={"5%"} />
+            </div>
+            <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
+              <Button label={"10%"} />
+            </div>{" "}
+            <div className="  pr-3 py-4 max-w-32 text-white col-span-1">
+              <Button label={"15%"} />
+            </div>{" "}
+            <div className="  pr-3 max-w-32 text-white col-span-1">
+              <Button label={"25%"} />
+            </div>{" "}
+            <div className=" pr-3 max-w-32 text-white col-span-1">
+              <Button label={"50%"} />
+            </div>{" "}
+            <div className=" pr-3 max-w-32 text-dark-cyan col-span-1">
+              <input
+                type="text"
+                placeholder="Custom"
+                className="bg-inp hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
+              />
+            </div>
           </div>
-          <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
-            <Button label={'10%'} />
-          </div>          <div className="  pr-3 py-4 max-w-32 text-white col-span-1">
-            <Button label={'15%'} />
-          </div>          <div className="  pr-3 max-w-32 text-white col-span-1">
-            <Button label={'25%'} />
-          </div>          <div className=" pr-3 max-w-32 text-white col-span-1">
-            <Button label={'50%'} />
-          </div>          <div className=" pr-3 max-w-32 text-dark-cyan col-span-1">
-          <input
-                  type="text"
-                  placeholder="Custom"
-                  className="bg-inp hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
-                />
+          <div className="text-gray-500 mt-6 flex-col ">Number of People</div>
+          <div className="text-dark-cyan w-72 ml-3 mt-2 mb-3">
+            <input
+              type="text"
+              placeholder="ø"
+              className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
+            />
           </div>
-        </div>
-        <div className="text-gray-500 mt-6 flex-col ">
-            Number of People
-                </div>
-        <div className="text-dark-cyan w-72 ml-3 mt-2 mb-3">
-                <input
-                  type="text"
-                  placeholder="ø"
-                  className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
-                />
-              </div>
         </div>
         <div className="bg-dark-cyan rounded-xl w-80 h-max  sm:pt-2 mt-4 mr-8 md:flex-grow p-4 sm:mr-3 pt-3 ml-6 flex-row ">
           <div className="col-span-1 flex">
@@ -89,7 +89,7 @@ export const MainCard = () => {
           </div>
 
           <div className=" mt-14 px-5 py-4 text-dark-cyan">
-            <Button label={'RESET'} />
+            <Button label={"RESET"} />
           </div>
         </div>
       </div>

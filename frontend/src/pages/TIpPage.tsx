@@ -1,9 +1,11 @@
-import { Logo } from "../components/Logo"
-import { MainCard } from "../components/MainCard"
+import { Logo } from "../components/Logo";
+import { MainCard } from "../components/MainCard";
 
 export const TipPage = () => {
-    return <div className="">
-        <Logo/>
-        <MainCard/>
+  return (
+    <div className="">
+      <Logo />
+      <MainCard />
     </div>
-}
+  );
+};
