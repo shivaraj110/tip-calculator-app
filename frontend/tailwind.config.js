@@ -23,7 +23,8 @@ export default {
 'amt-cyan' : '#26c0ab',
 'dark-cyan' : '#00494d',
 'very-lightCyan' : '#f4fafa',
-'btn-cyan' : '#0f766e'
+'btn-cyan' : '#0f766e',
+'inp' : '	#f4fafa'
     },
     extend: {},
   },

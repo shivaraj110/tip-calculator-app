@@ -2,7 +2,7 @@ import { Logo } from "../components/Logo"
 import { MainCard } from "../components/MainCard"
 
 export const TipPage = () => {
-    return <div>
+    return <div className="">
         <Logo/>
         <MainCard/>
     </div>

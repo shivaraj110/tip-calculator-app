@@ -2,7 +2,7 @@ export function Logo() {
   return (
     <div>
       <div className="flex justify-center space-mono-regular text-2xl tracking-widest text-grayish-cyan">
-        <div className="mt-32">
+        <div className="mt-24">
             SPLI
         </div>
       </div>
