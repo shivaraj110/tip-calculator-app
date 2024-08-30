@@ -109,7 +109,7 @@ export const MainCard = () => {
 
             <div className="col-span-1 flex-row ml-14 mt-10 ">
               <div className="text-4xl text-amt-cyan pr-5 flex-row ">
-                ${bill * percentage}
+                ${Math.floor(bill * percentage)}
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ export const MainCard = () => {
             </div>
             <div className=" flex-row ml-14 mt-10 ">
               <div className="text-4xl text-amt-cyan mr-5 md:mr-5 ml-10 flex-row ">
-                ${tip}
+                ${Math.floor(tip)}
               </div>
             </div>
           </div>
