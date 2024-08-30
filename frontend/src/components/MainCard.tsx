@@ -129,6 +129,8 @@ export const MainCard = () => {
           <div
             onClick={() => {
               setTip(0);
+              setPeople(0)
+              setPercentage(0)
             }}
             className=" mt-14 px-5 py-4 text-dark-cyan">
             <Button label={"RESET"} />
