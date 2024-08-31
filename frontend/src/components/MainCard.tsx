@@ -8,7 +8,7 @@ export const MainCard = () => {
   const [tip, setTip] = useRecoilState(tipAtom);
   return (
     <div className="flex justify-center mt-12 space-mono-regular flex-wrap  ">
-      <div className="bg-white rounded-3xl sm:max-w-7/12 h-max flex justify-center p-6 flex-row flex-grow-0 sm:flex-nowrap flex-wrap ">
+      <div className="bg-white rounded-3xl sm:max-w-7/12 h-max flex justify-center shadow-md hover:shadow-2xl p-6 flex-row flex-grow-0 sm:flex-nowrap flex-wrap hover:">
         <div className="rounded-xl w-80 h-max  mt-2 flex-row md:flex-grow ">
           <div className=" flex">
             <div className="flex-row">
@@ -74,7 +74,7 @@ export const MainCard = () => {
             />
           </div>
         </div>
-        <div className="bg-dark-cyan rounded-xl w-80 h-max  sm:pt-2 mt-4 mr-8 md:flex-grow p-4 sm:mr-3 pt-3 ml-6 flex-row ">
+        <div className="bg-dark-cyan rounded-xl w-80 h-max  sm:pt-2 mt-2 mr-8 md:flex-grow p-4 sm:mr-1 ml-6 flex-row ">
           <div className="col-span-1 flex">
             <div className="flex-row">
               <div className="text-very-lightCyan pt-10 pl-3 ">Tip Amount</div>
