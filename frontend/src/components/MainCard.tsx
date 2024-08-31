@@ -63,7 +63,7 @@ export const MainCard = () => {
             </div>
           </div>
           <div className="text-gray-500 mt-6 flex-col ">Number of People</div>
-          <div className="text-dark-cyan w-72 ml-3 mt-2 mb-3">
+          <div className="text-dark-cyan w-72 ml-1 mt-2 mb-3">
             <input
               onChange={(e) => {
                 setPeople(Number(e.target.value));
