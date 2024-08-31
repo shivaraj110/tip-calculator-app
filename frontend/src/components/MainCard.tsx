@@ -77,14 +77,14 @@ export const MainCard = () => {
         <div className="bg-dark-cyan rounded-xl w-80 h-max  sm:pt-2 mt-4 mr-8 md:flex-grow p-4 sm:mr-3 pt-3 ml-6 flex-row ">
           <div className="col-span-1 flex">
             <div className="flex-row">
-              <div className="text-very-lightCyan pt-10 pl-3 ">Tip_Amount</div>
+              <div className="text-very-lightCyan pt-10 pl-3 ">Tip Amount</div>
 
               <div className="text-gray-500 ">/person</div>
             </div>
 
             <div className="col-span-1 flex-row ml-14 mt-10 ">
               <div className="text-4xl text-amt-cyan pr-5 flex-row ">
-                ${Math.floor(tip / People)}
+                ${People ? Math.floor(tip / People) : 0}
               </div>
             </div>
           </div>
