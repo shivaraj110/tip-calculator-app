@@ -18,7 +18,7 @@ export const MainCard = () => {
                 <input
                   type="text"
                   placeholder="§"
-                  className="bg-inp input hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
+                  className="bg-inp input border-2 border-very-lightCyan hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
                   onChange={(e) => {
                     setBill(Number(e.target.value));
                   }}
@@ -55,7 +55,7 @@ export const MainCard = () => {
                 id="in2"
                 type="text"
                 placeholder="Custom"
-                className="bg-inp hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
+                className="bg-inp border-2 border-very-lightCyan hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
                 onChange={(e) => {
                   setTip(bill * (Number(e.target.value) / 100) * People);
                 }}
@@ -70,7 +70,7 @@ export const MainCard = () => {
               }}
               type="text"
               placeholder="ø"
-              className="bg-inp  hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
+              className="bg-inp border-2 border-very-lightCyan hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
             />
           </div>
         </div>
