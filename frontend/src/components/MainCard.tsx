@@ -9,7 +9,7 @@ export const MainCard = () => {
   const [bill, setBill] = useRecoilState(billAtom);
   const [tip, setTip] = useRecoilState(tipAtom);
   return (
-    <div className="flex justify-center mt-12 space-mono-regular flex-wrap ">
+    <div className="flex justify-center mt-12 space-mono-regular flex-wrap  ">
       <div className="bg-white rounded-3xl sm:max-w-7/12 h-max flex justify-center p-6 flex-row flex-grow-0 sm:flex-nowrap flex-wrap ">
         <div className="rounded-xl w-80 h-max  mt-2 flex-row md:flex-grow ">
           <div className=" flex">
