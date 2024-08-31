@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { Button } from "./Button";
 import { useRecoilState } from "recoil";
 import { billAtom, poepleAtom, tipAtom } from "../atoms/billAtoms";
 import { PercentageBtn } from "./PercentageBtn";
 export const MainCard = () => {
   const [People, setPeople] = useRecoilState(poepleAtom);
-  const [percentage, setPercentage] = useState(0);
   const [bill, setBill] = useRecoilState(billAtom);
   const [tip, setTip] = useRecoilState(tipAtom);
   return (
@@ -59,8 +57,7 @@ export const MainCard = () => {
                 placeholder="Custom"
                 className="bg-inp hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
                 onChange={(e) => {
-                  setPercentage(Number(e.target.value) / 100);
-                  setTip(bill * percentage * People);
+                  setTip(bill * (Number(e.target.value) / 100) * People);
                 }}
               />
             </div>
