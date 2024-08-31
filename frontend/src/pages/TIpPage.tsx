@@ -3,7 +3,7 @@ import { MainCard } from "../components/MainCard";
 
 export const TipPage = () => {
   return (
-    <div className="bg-bg-cyan w-screen">
+    <div className="bg-bg-cyan h-max">
       <Logo />
       <MainCard />
       <div className="text-center mt-8 text-gray-500">

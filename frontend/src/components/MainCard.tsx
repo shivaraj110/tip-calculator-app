@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import { useRecoilState } from "recoil";
+import { billAtom, poepleAtom, tipAtom } from "../atoms/billAtoms";
+import { PercentageBtn } from "./PercentageBtn";
 export const MainCard = () => {
-  const [People, setPeople]: any = useState(0);
-  const [percentage, setPercentage]: any = useState(0);
-  const [bill, setBill]: any = useState(0);
-  const [tip, setTip]: any = useState(0);
+  const [People, setPeople] = useRecoilState(poepleAtom);
+  const [percentage, setPercentage] = useState(0);
+  const [bill, setBill] = useRecoilState(billAtom);
+  const [tip, setTip] = useRecoilState(tipAtom);
   return (
     <div className="flex justify-center mt-12 space-mono-regular flex-wrap ">
       <div className="bg-white rounded-3xl sm:max-w-7/12 h-max flex justify-center p-6 flex-row flex-grow-0 sm:flex-nowrap flex-wrap ">
-        <div className="rounded-xl w-80 h-max col-span-1 mt-2 flex-row md:flex-grow ">
-          <div className="col-span-1 flex">
+        <div className="rounded-xl w-80 h-max  mt-2 flex-row md:flex-grow ">
+          <div className=" flex">
             <div className="flex-row">
               <div className="text-gray-500 pt-1 flex-col mb-2">Bill</div>
 
@@ -17,7 +20,7 @@ export const MainCard = () => {
                 <input
                   type="text"
                   placeholder="§"
-                  className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
+                  className="bg-inp input hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl"
                   onChange={(e) => {
                     setBill(Number(e.target.value));
                   }}
@@ -25,7 +28,6 @@ export const MainCard = () => {
               </div>
             </div>
           </div>
-
           <div className="flex mt-6">
             <div className="col-span-1 flex">
               <div className="flex-row">
@@ -35,48 +37,24 @@ export const MainCard = () => {
             </div>
           </div>
           <div className="grid grid-cols-3 flex-row">
-            <div
-              onClick={() => {
-                setPercentage(0.05);
-                setTip(bill * percentage * People);
-              }}
-              className=" pr-3 py-4 max-w-32 text-white col-span-1">
-              <Button label={"5%"} />
+            <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
+              <PercentageBtn label={"5%"} p={0.05} />
             </div>
-            <div
-              onClick={() => {
-                setPercentage(0.1);
-                setTip(bill * percentage * People);
-              }}
-              className=" pr-3 py-4 max-w-32 text-white col-span-1">
-              <Button label={"10%"} />
+            <div className=" pr-3 py-4 max-w-32 text-white col-span-1">
+              <PercentageBtn label={"10%"} p={0.1} />
             </div>
-            <div
-              onClick={() => {
-                setPercentage(0.15);
-                setTip(bill * percentage * People);
-              }}
-              className="  pr-3 py-4 max-w-32 text-white col-span-1">
-              <Button label={"15%"} />
+            <div className="  pr-3 py-4 max-w-32 text-white col-span-1">
+              <PercentageBtn label={"15%"} p={0.15} />
             </div>
-            <div
-              onClick={() => {
-                setPercentage(0.25);
-                setTip(bill * percentage * People);
-              }}
-              className="  pr-3 max-w-32 text-white col-span-1">
-              <Button label={"25%"} />
+            <div className="  pr-3 max-w-32 text-white col-span-1">
+              <PercentageBtn label={"25%"} p={0.25} />
             </div>
-            <div
-              onClick={() => {
-                setPercentage(0.5);
-                setTip(bill * percentage * People);
-              }}
-              className=" pr-3 max-w-32 text-white col-span-1">
-              <Button label={"50%"} />
+            <div className=" pr-3 max-w-32 text-white col-span-1">
+              <PercentageBtn label={"50%"} p={0.5} />
             </div>
             <div className=" pr-3 max-w-32 text-dark-cyan col-span-1">
               <input
+                id="in2"
                 type="text"
                 placeholder="Custom"
                 className="bg-inp hover:border-2 text-center hover:border-amt-cyan rounded-md p-1 w-full cursor-pointer text-xl text-dark-cyan"
@@ -95,7 +73,7 @@ export const MainCard = () => {
               }}
               type="text"
               placeholder="ø"
-              className="bg-inp hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
+              className="bg-inp  hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
             />
           </div>
         </div>
@@ -109,7 +87,7 @@ export const MainCard = () => {
 
             <div className="col-span-1 flex-row ml-14 mt-10 ">
               <div className="text-4xl text-amt-cyan pr-5 flex-row ">
-                ${Math.floor(bill * percentage)}
+                ${Math.floor(tip / People)}
               </div>
             </div>
           </div>
@@ -125,12 +103,9 @@ export const MainCard = () => {
               </div>
             </div>
           </div>
-
           <div
             onClick={() => {
               setTip(0);
-              setPeople(0)
-              setPercentage(0)
             }}
             className=" mt-14 px-5 py-4 text-dark-cyan">
             <Button label={"RESET"} />
