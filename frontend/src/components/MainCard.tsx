@@ -68,9 +68,10 @@ export const MainCard = () => {
               onChange={(e) => {
                 setPeople(Number(e.target.value));
               }}
+              required
               type="text"
               placeholder="ø"
-              className="bg-inp border-2 border-very-lightCyan hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
+              className="bg-inp border-2 group-required:border-red border-very-lightCyan hover:border-2 text-right placeholder:text-left placeholder:relative placeholder:top-1  hover:border-amt-cyan w-72 rounded-md p-1 cursor-pointer text-2xl placeholder:fill-gray-500"
             />
           </div>
         </div>
@@ -88,7 +89,6 @@ export const MainCard = () => {
               </div>
             </div>
           </div>
-
           <div className="flex mt-6">
             <div className="flex-row">
               <div className="text-very-lightCyan pt-10  pl-5">Total</div>
